@@ -1,0 +1,9 @@
+{
+	"name": "gskdffforpublish",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b85dc6c2-d35d-4885-966c-3699ce9b60ca",
+		"tenantId": "b37f1dc7-2412-465c-a952-c1243a898b09"
+	}
+}
