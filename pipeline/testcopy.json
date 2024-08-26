@@ -24,7 +24,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[usp_GetProductsByColor]",
+					"storedProcedureName": "[dbo].[usp_GetProductsByColor_Truncate]",
 					"storedProcedureParameters": {
 						"Color": {
 							"value": "Red",
