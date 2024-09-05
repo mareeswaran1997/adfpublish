@@ -82,6 +82,10 @@
 							"ds_staging_dir": {
 								"value": "@pipeline().parameters.pp_stag_dir",
 								"type": "Expression"
+							},
+							"ds_file_name": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
 							}
 						}
 					}
