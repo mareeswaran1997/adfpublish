@@ -52,42 +52,14 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "sourceds",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_file_sys": {
-								"value": "@pipeline().parameters.pp_file_sys",
-								"type": "Expression"
-							},
-							"ds_file_dir": {
-								"value": "@pipeline().parameters.pp_landing_dir",
-								"type": "Expression"
-							},
-							"ds_file_name": {
-								"value": "@pipeline().parameters.pp_file_name",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "src_ds",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "sinkds",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_file_sys": {
-								"value": "@pipeline().parameters.pp_file_sys",
-								"type": "Expression"
-							},
-							"ds_staging_dir": {
-								"value": "@pipeline().parameters.pp_staging_dir",
-								"type": "Expression"
-							},
-							"ds_file_name": {
-								"value": "@pipeline().parameters.pp_file_name",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "sink_ds_cc",
+						"type": "DatasetReference"
 					}
 				]
 			}
