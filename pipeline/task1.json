@@ -64,20 +64,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"pp_file_sys": {
-				"type": "string"
-			},
-			"pp_landing_dir": {
-				"type": "string"
-			},
-			"pp_staging_dir": {
-				"type": "string"
-			},
-			"pp_file_name": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
