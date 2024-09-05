@@ -1,5 +1,5 @@
 {
-	"name": "task1",
+	"name": "zipped",
 	"properties": {
 		"activities": [
 			{
@@ -52,18 +52,60 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "src_ds",
-						"type": "DatasetReference"
+						"referenceName": "sourceds",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_file_sys": {
+								"value": "@pipeline().parameters.pp_file_sys",
+								"type": "Expression"
+							},
+							"ds_file_dir": {
+								"value": "@pipeline().parameters.pp_lan_dir",
+								"type": "Expression"
+							},
+							"ds_file_name": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "sink_ds_cc",
-						"type": "DatasetReference"
+						"referenceName": "sinkds",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_file_sys": {
+								"value": "@pipeline().parameters.pp_file_sys",
+								"type": "Expression"
+							},
+							"ds_staging_dir": {
+								"value": "@pipeline().parameters.pp_stag_dir",
+								"type": "Expression"
+							},
+							"ds_file_name": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"pp_file_sys": {
+				"type": "string"
+			},
+			"pp_lan_dir": {
+				"type": "string"
+			},
+			"pp_stag_dir": {
+				"type": "string"
+			},
+			"pp_file_name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
