@@ -1,5 +1,5 @@
 {
-	"name": "sourceds",
+	"name": "sinkds",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -9,7 +9,7 @@
 			"ds_file_sys": {
 				"type": "string"
 			},
-			"ds_file_dir": {
+			"ds_staging_dir": {
 				"type": "string"
 			},
 			"ds_file_name": {
@@ -23,6 +23,7 @@
 				"type": "AzureBlobFSLocation"
 			},
 			"columnDelimiter": ",",
+			"compressionCodec": "deflate",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""

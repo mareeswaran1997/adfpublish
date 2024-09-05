@@ -26,12 +26,65 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "sourceds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_file_sys": {
+								"value": "@pipeline().parameters.pp_file_sys",
+								"type": "Expression"
+							},
+							"ds_file_dir": {
+								"value": "@pipeline().parameters.pp_landing_dir",
+								"type": "Expression"
+							},
+							"ds_file_name": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sinkds",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_file_sys": {
+								"value": "@pipeline().parameters.pp_file_sys",
+								"type": "Expression"
+							},
+							"ds_staging_dir": {
+								"value": "@pipeline().parameters.pp_staging_dir",
+								"type": "Expression"
+							},
+							"ds_file_name": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
