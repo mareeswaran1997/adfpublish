@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "AdventureWorksLT2012.zip",
 				"folderPath": "Bridge",
 				"fileSystem": "adfpoc"
 			},
