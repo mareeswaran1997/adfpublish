@@ -1,5 +1,5 @@
 {
-	"name": "sink_ds_cc",
+	"name": "sinkbridge",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Bridge",
+				"folderPath": "test",
 				"fileSystem": "adfpoc"
 			},
 			"columnDelimiter": ",",
