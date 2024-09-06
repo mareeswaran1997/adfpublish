@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Bridge/AdventureWorksLT2012",
+				"folderPath": "staging/AdventureWorksLT2012",
 				"fileSystem": "adfpoc"
 			}
 		}
