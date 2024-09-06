@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "staging",
+				"folderPath": "Bridge",
 				"fileSystem": "adfpoc"
 			},
 			"columnDelimiter": ",",
