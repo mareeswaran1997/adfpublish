@@ -85,7 +85,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "removefolder",
+						"referenceName": "remfolderbr",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
