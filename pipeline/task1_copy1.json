@@ -126,7 +126,12 @@
 						"referenceName": "sink_ds_cc",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"itemName",
+						"itemType",
+						"exists",
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
